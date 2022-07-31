@@ -1,0 +1,50 @@
+
+{% extends "base_login.html" %}
+
+{% block title %}Welcome {{user}} {% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for msg in messages %}
+			<p class="alert alert-success alert-dismissible" style="text-align: center;">
+				<button type="button" class="close" data-dismiss="alert">&times;</button> {{msg}}</p>
+		{% endfor %}
+	{% endif %}
+{% endwith %}
+
+<h5 style="margin-top: 20px;">Welcome: {{user}}</h5>
+<div class="row" style="margin-top: 20px">
+	<div class="col-sm-2 col-md-2 col-lg-2">
+		<nav class="navbar navbar-light bg-darks" style="font-size: 20px;">
+			<ul class="navbar-nav">
+			<li class="nav-item" style="margin-bottom: 5px;">
+				<a class="nav-link" href="/">Home</a>
+			</li>
+			<li class="nav-item" style="margin-bottom: 5px;">
+				<a class="nav-link" href="#">My Result</a>
+			</li>
+			<li class="nav-item" style="margin-bottom: 5px;">
+				<a class="nav-link" href="/logout">Sign Out</a>
+			</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="col-sm-10 col-md-10 col-lg-10">
+		<h5 style="background-color: antiquewhite;padding: 10px;">::My Information::</h5>
+		<div class="table-responsive" style="font-size: 14px;">
+			<table class="table table-hover table-striped">
+				<thead class="thead-light">
+				{% for details,value in myinfo.items() %}
+				<tr>
+					<th style="font-size: 16px;">{{ details }}</th>
+					<td>{{ value }}</td>
+				</tr>
+				{% endfor %}
+				</thead>
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,96 @@
+
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12 ">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{ url_for('static', filename='images/slider_1.jpg') }}" alt="slider_1" style="width:1700px;height:400px">
+          <div class="carousel-caption">
+            <h3>Los Angeles</h3>
+            <p>We had such a great time in!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/slider_2.jpg') }}" alt="slider_2" style="width:1700px;height:400px">
+          <div class="carousel-caption">
+            <h3>Los Angeles</h3>
+            <p>We had such a great time in LA!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/slider_3.jpg') }}" alt="slider_3" style="width:1700px;height:400px">
+          <div class="carousel-caption">
+            <h3>Los Angeles</h3>
+            <p>We had such a great time in LA!</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+</div>
+</div>
+
+<div class="row" style="background-image: url('../static/images/Background_admission.jpg');background-size: cover; background-position: center center;font-family: Poppins,sans-serif;margin: 2px 0 2px 0;">
+  <div class="col-sm-4 col-md-4 col-lg-4">
+    <img src="{{ url_for('static', filename='images/admission_2.jpg') }}" class="rounded" alt="Apply for Admission" style="width:480px;height:320px">
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4" style="margin:30px 0 20px 0">
+    <h3 style="font-size: 32px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff;;">Apply for Admission</h3>
+    <p style="font-size: 25px ;font-weight: 500 ;font-style: normal ;color: #51be78 ;margin-bottom:20px;">2021/2022 applications are now open</p>
+    <p style="font-size: 18px ;text-transform: none ;color: #c1d3ff ;text-align: left;margin-bottom:20px;">We don’t just give students an education and <br/> experiences that set them up for success in a career,<br/> we help them succeed in their career to discover a <br/> field they’re passionate about and dare to lead it.</p>
+    <a href="" class="btn btn-info" style="color: #ffffff;font-weight: bold;font-size: 16px;">Apply Now</a>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4" style="margin:30px 0 20px 0">
+    <h3 style="font-size: 32px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff;;">Returning Student</h3>
+    <p style="font-size: 25px ;font-weight: 500 ;font-style: normal ;color: #51be78 ;margin-bottom:20px;">2021/2022 Academic Session</p>
+    <p style="font-size: 18px ;text-transform: none ;color: #c1d3ff ;text-align: left;margin-bottom:20px;">We don’t just give students an education and <br/> experiences that set them up for success in a career,<br/> we help them succeed in their career to discover a <br/> field they’re passionate about and dare to lead it.</p>
+    <a href="" class="btn btn-primary" style="color: #ffffff;font-weight: bold;font-size: 16px;">Read More</a>
+  </div>
+</div>
+
+<div class="row" style="background-color: #1b2945;color: #ffffff;font-family: Poppins,sans-serif">
+  <div class="col-sm-4 col-md-4 col-lg-4" style="margin:35px 0 30px 0">
+    <img src="{{ url_for('static', filename='images/col-icon-1.png') }}" >
+    <p style="font-size: 21px ;font-weight: 700 ;font-style: normal ;margin:20px auto 15px auto;text-transform: none">Vision</p>
+    <p style="font-size: 17px ;font-weight: 300 ;font-style: normal ;margin-bottom:20px;color: #e6e6e6 ;text-align: left;text-transform: none">The Vision of the TASUED is to be the preferred Education University, which will excel in preparing educators who will be leaders in all spheres of…</p>
+    <a href="#" style="color:#3db166;font-size: 14px">Read More</a>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4" style="margin:35px 0 30px 0">
+    <img src="{{ url_for('static', filename='images/col-icon-2.png') }}" >
+    <p style="font-size: 21px ;font-weight: 700 ;font-style: normal ;margin:20px auto 15px auto;text-transform: none">Mission</p>
+    <p style="font-size: 17px ;font-weight: 300 ;font-style: normal ;margin-bottom:20px;color: #e6e6e6 ;text-align: left;text-transform: none">Our mission is to enhance the quality of teaching and learning and continuously update the methods and skills of knowledge providers…</p>
+    <a href="#" style="color:#3db166;font-size: 14px">Read More</a>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4" style="margin:35px 0 30px 0">
+    <img src="{{ url_for('static', filename='images/col-icon-4.png') }}" >
+    <p style="font-size: 21px ;font-weight: 700 ;font-style: normal ;margin:20px auto 15px auto;text-transform: none">Our History</p>
+    <p style="font-size: 17px ;font-weight: 300 ;font-style: normal ;margin-bottom:20px;color: #e6e6e6 ;text-align: left;text-transform: none">Tai Solarin University of Education: meeting the global needs of the Nation’s educational system. Establishment of institutions is a…</p>
+    <a href="#" style="color:#3db166;font-size: 14px">Read More</a>
+  </div>
+  
+</div>
+
+{% endblock %}
+
